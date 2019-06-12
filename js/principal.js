@@ -17,6 +17,9 @@ matriz_jogo ['c'] [1] = 0;
 matriz_jogo ['c'] [2] = 0;
 matriz_jogo ['c'] [3] = 0;
 
+//Ocultar Tela de Jogo
+$("#jogoInicio").hide();
+
 $(document).ready(function(){
 
   $("#botao-start").click(function(){
@@ -35,6 +38,10 @@ $(document).ready(function(){
     //Exibição dos nomes
     $("#jogador1-nome").html($("#jogador-um").val());
     $("#jogador2-nome").html($("#jogador-dois").val());
+
+    //Visualização das Telas (Div)
+    $("#telaInicial").hide();
+    $("#jogoInicio").show();
 
   })
 });
