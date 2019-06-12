@@ -44,13 +44,37 @@ $(document).ready(function(){
     $("#jogoInicio").show();
 
   });
-
+  //Contador de Click na área
   $(".espaco").click(function(){
-    var qtClick = this.id;
-    $("#" + qtClick).off();
-    movimento(qtClick);
+    var espacoSelecionado = this.id;
+    $("#" + espacoSelecionado).off();
+    movimento(espacoSelecionado);
   });
 
-  
+  //Verificador de pontos e adicionador de "icones (X ou O)" 
+  function movimento(id){
+
+    var icone = "";
+    var pontos = 0;
+
+    if (rodada % 2 == 1){
+
+      icone = 'url("imagens/cruz.png")'
+      pontos = -1;
+    } else {
+
+      icone = 'url("imagens/bolinha.png")'
+      pontos = 1
+    }
+  }
+
+  rodada++;
+
+  $("#" + id).css('background-image', icone);
+
+  var linhaColuna = id.split('-');
+
+  matriz_jogo[linhaColuna[0]][linhaColuna[1]] = pontos;
+
 
 });
