@@ -32,7 +32,9 @@ $(document).ready(function(){
         return false;
     }
 
-    
+    //Exibição dos nomes
+    $("#jogador1-nome").html($("#jogador-um").val());
+    $("#jogador2-nome").html($("#jogador-dois").val());
 
   })
 });
