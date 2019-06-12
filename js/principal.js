@@ -51,30 +51,68 @@ $(document).ready(function(){
     movimento(espacoSelecionado);
   });
 
-  //Verificador de pontos e adicionador de "icones (X ou O)" 
+  //Verificador de pontos e acionador de "icones (X ou O)"
   function movimento(id){
 
     var icone = "";
-    var pontos = 0;
+    var ponto = 0;
 
     if (rodada % 2 == 1){
 
       icone = 'url("imagens/cruz.png")'
-      pontos = -1;
+      ponto = -1;
     } else {
 
       icone = 'url("imagens/bolinha.png")'
-      pontos = 1
+      ponto = 1
     }
+
+    rodada++;
+
+    $("#" + id).css('background-image', icone);
+
+    var linhaColuna = id.split('-');
+
+    matriz_jogo[linhaColuna[0]][linhaColuna[1]] = pontos;
   }
 
-  rodada++;
+  function checandoCombinacao() {
 
-  $("#" + id).css('background-image', icone);
+    //Verificador na horizontal
+    var pontos = 0;
+    for (var cont = 1; cont <= 3; cont++){
+      pontos = pontos + matriz_jogo['a'][i];
+    }
+    vencedor(pontos);
 
-  var linhaColuna = id.split('-');
+    pontos = 0;
+    for (var cont = 1; cont <= 3; cont++){
+      pontos = pontos + matriz_jogo['b'][i];
+    }
+    vencedor(pontos);
 
-  matriz_jogo[linhaColuna[0]][linhaColuna[1]] = pontos;
+    pontos = 0;
+    for (var cont = 1; cont <= 3; cont++){
+      pontos = pontos + matriz_jogo['c'][i];
+    }
+    vencedor(pontos);
 
+    //Verificador na vertical
+    for(var cont2 = 1; cont <=3; cont2++){
+      pontos = 0;
+      pontos += matriz_jogo['a'][cont2];
+      pontos += matriz_jogo['b'][cont2];
+      pontos += matriz_jogo['c'][cont2];
 
+      vencedor(pontos);
+    }
+
+    //Verificador na diagonal
+    pontos = 0;
+    pontos = matriz_jogo['a'][1] + matriz_jogo['b'][2] + matriz_jogo['c'][3];
+
+    pontos = 0;
+    pontos = matriz_jogo['a'][3] + matriz_jogo['b'][2] + matriz_jogo['c'][1];
+
+  }
 });
