@@ -1,0 +1,59 @@
+.tabela1{
+  border-right: 1;
+  border-bottom: 1;
+  border-style: solid;
+  border-width: 3px;
+  border-top: 0;
+  border-left: 0;
+}
+
+.tabela2{
+  border-bottom: 1;
+  border-style: solid;
+  border-width: 3px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+.tabela3{
+  border-right: 1;
+  border-style: solid;
+  border-width: 3px;
+  border-left: 0;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.imagem{
+  width: 200px;
+  margin-top: 200px;
+}
+.player1{
+  margin-left: 300px;
+}
+
+.player2{
+  margin-left: -100px;
+}
+#jogador-um{
+  margin-left: 280px;
+  width: 250px;
+  margin-top: -20px;
+}
+
+#jogador-dois{
+  margin-left: -100px;
+  width: 250px;
+  margin-top: -19px;
+}
+
+#botao-start{
+  width: 100px;
+  margin-top: 200px;
+  margin-left: 150px;
+}
+
+.espaco{
+  width:100px;
+  height:100px;
+}

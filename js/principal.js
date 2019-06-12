@@ -43,5 +43,14 @@ $(document).ready(function(){
     $("#telaInicial").hide();
     $("#jogoInicio").show();
 
-  })
+  });
+
+  $(".espaco").click(function(){
+    var qtClick = this.id;
+    $("#" + qtClick).off();
+    movimento(qtClick);
+  });
+
+  
+
 });
