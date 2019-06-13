@@ -19,8 +19,9 @@ matriz_jogo ['c'] [2] = 0;
 matriz_jogo ['c'] [3] = 0;
 
 //Ocultar Tela de Jogo
-$("#telaInicial").hide();
-$("#jogoInicio").show();
+$("#telaInicial").show();
+$("#jogoInicio").hide();
+$("#reiniciar").hide();
 
 $(document).ready(function(){
 
@@ -42,8 +43,11 @@ $(document).ready(function(){
     $("#jogador2-nome").html($("#jogador-dois").val());
 
     //Visualização das Telas (Div)
+
     $("#telaInicial").hide();
     $("#jogoInicio").show();
+    $('.vez1').html('<img src="imagens/player1.png" style="width:100px;">');
+
 
   });
   //Contador de Click na área
@@ -63,10 +67,15 @@ $(document).ready(function(){
 
       icone = 'url("imagens/cruz.png")';
       ponto = -1;
+      $('.vez1').html('<img src="imagens/player2.png" style="width:100px;">');
+
+
     } else {
 
       icone = 'url("imagens/bolinha.png")';
       ponto = 1;
+      $('.vez1').html('<img src="imagens/player1.png" style="width:100px;">');
+
     }
 
     rodada++;
@@ -122,19 +131,22 @@ $(document).ready(function(){
   function vencedor(pontos) {
 
     if(pontos == -3) {
-      var primeiroJogador = $("#jogador-um").val();
-      alert (primeiroJogador + 'é o vencedor !');
+      $(".vez").html("O vencedor é:")
+      $('.vez1').html('<img src="imagens/player1.png" style="width:100px;">');
       $('.espaco').off();
+      $("#reiniciar").show();
     } else if(pontos == 3) {
-        var segundoJogador = $("#jogador-dois").val();
-        alert (segundoJogador + 'é o vencedor !');
-        $('.espaco').off();
+      $(".vez").html("O vencedor é:")
+      $('.vez1').html('<img src="imagens/player2.png" style="width:100px;">');
+      $('.espaco').off();
+      $("#reiniciar").show();
     }
     else if((matriz_jogo['a'][1] && matriz_jogo['a'][2] && matriz_jogo['a'][3] && matriz_jogo['b'][1] &&
 			matriz_jogo['b'][2] && matriz_jogo['b'][3] && matriz_jogo['c'][1] && matriz_jogo['c'][2] &&
 			matriz_jogo['c'][3]) != 0){
-        alert("Deu velha");
-        $('.espaco').off();
+        $(".vez").html("Deu velha!")
+        $('.vez1').html('<img src="imagens/empate.png" style="width:100px;">');
+        $("#reiniciar").show();
       }
   }
 

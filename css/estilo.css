@@ -1,3 +1,4 @@
+
 .tabela1{
   border-right: 1;
   border-bottom: 1;
@@ -31,9 +32,13 @@
 .player1{
   margin-left: 300px;
 }
-
+.player{
+  margin-left: 150px;
+}
 .player2{
   margin-left: -100px;
+  width: 210px;
+  margin-top: 190px;
 }
 #jogador-um{
   margin-left: 280px;
@@ -56,4 +61,35 @@
 .espaco{
   width:100px;
   height:100px;
+}
+
+.tabuleiro{
+    margin-top: 100px;
+    margin-left: 150px;
+}
+
+#jogador1-nome{
+  margin-left: 210px;
+  margin-top: -40px;
+  font-size: 15px;
+  font-weight: bold;
+}
+#jogador2-nome{
+  margin-top: -40px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#reiniciar{
+  margin-left: 590px;
+  margin-top: 20px;
+  margin-bottom: -90px;
+}
+
+.vez{
+  margin-left: 610px;
+}
+
+.vez1{
+  margin-left: 600px;
 }
