@@ -8,6 +8,8 @@
   border-left: 0;
 }
 
+
+
 .tabela2{
   border-bottom: 1;
   border-style: solid;
@@ -33,13 +35,21 @@
   margin-left: 300px;
 }
 .player{
+  margin-top: 150px;
   margin-left: 150px;
+}
+.p2{
+  margin-left: -100px;
+  width: 210px;
+  margin-top: 140px;
 }
 .player2{
   margin-left: -100px;
   width: 210px;
   margin-top: 190px;
 }
+
+
 #jogador-um{
   margin-left: 280px;
   width: 250px;
@@ -64,8 +74,10 @@
 }
 
 .tabuleiro{
-    margin-top: 100px;
+    width: 305px;
+    margin-top: 50px;
     margin-left: 150px;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2), 0px 10px 15px rgba(0, 0, 0, 0.5)
 }
 
 #jogador1-nome{
@@ -80,16 +92,20 @@
   font-weight: bold;
 }
 
-#reiniciar{
-  margin-left: 590px;
+
+.linhaBotao{
   margin-top: 20px;
-  margin-bottom: -90px;
+  margin-left: 575px;
+  margin-bottom: -150px;
 }
 
 .vez{
-  margin-left: 610px;
+  margin-left: 605px;
+  margin-top: 20px;
 }
+
 
 .vez1{
   margin-left: 600px;
+  margin-top: 0px;
 }

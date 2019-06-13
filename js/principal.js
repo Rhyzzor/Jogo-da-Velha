@@ -132,10 +132,12 @@ $(document).ready(function(){
 
     if(pontos == -3) {
       $(".vez").html("O vencedor é:")
+      $(".ganhador1").html('<img src="imagens/trofeu.png" style="width:100px; margin-top: -10px; margin-bottom: -200px; margin-left: 200px">')
       $('.vez1').html('<img src="imagens/player1.png" style="width:100px;">');
       $('.espaco').off();
       $("#reiniciar").show();
     } else if(pontos == 3) {
+      $(".ganhador2").html('<img src="imagens/trofeu.png" style="width:100px; margin-top: 80px; margin-bottom: -150px; margin-left: -50px;">')
       $(".vez").html("O vencedor é:")
       $('.vez1').html('<img src="imagens/player2.png" style="width:100px;">');
       $('.espaco').off();
@@ -145,7 +147,7 @@ $(document).ready(function(){
 			matriz_jogo['b'][2] && matriz_jogo['b'][3] && matriz_jogo['c'][1] && matriz_jogo['c'][2] &&
 			matriz_jogo['c'][3]) != 0){
         $(".vez").html("Deu velha!")
-        $('.vez1').html('<img src="imagens/empate.png" style="width:100px;">');
+        $('.vez1').html('<img src="imagens/empate.png" style="width:90px;">');
         $("#reiniciar").show();
       }
   }
