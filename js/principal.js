@@ -19,7 +19,8 @@ matriz_jogo ['c'] [2] = 0;
 matriz_jogo ['c'] [3] = 0;
 
 //Ocultar Tela de Jogo
-$("#jogoInicio").hide();
+$("#telaInicial").hide();
+$("#jogoInicio").show();
 
 $(document).ready(function(){
 
@@ -129,8 +130,15 @@ $(document).ready(function(){
         alert (segundoJogador + 'é o vencedor !');
         $('.espaco').off();
     }
-
+    else if((matriz_jogo['a'][1] && matriz_jogo['a'][2] && matriz_jogo['a'][3] && matriz_jogo['b'][1] &&
+			matriz_jogo['b'][2] && matriz_jogo['b'][3] && matriz_jogo['c'][1] && matriz_jogo['c'][2] &&
+			matriz_jogo['c'][3]) != 0){
+        alert("Deu velha");
+        $('.espaco').off();
+      }
   }
+
+
 
 
 
