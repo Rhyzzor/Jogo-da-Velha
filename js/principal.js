@@ -82,11 +82,13 @@ $(document).ready(function(){
 
     $("#" + id).css('background-image', icone);
 
+    //Puxando as colunas ocupadas e seus valores
     var linhaColuna = id.split('-');
     matriz_jogo[linhaColuna[0]][linhaColuna[1]] = ponto;
     checandoCombinacao();
   }
 
+  //Checar os modos de ganhar
   function checandoCombinacao() {
 
     //Verificador na horizontal
@@ -128,6 +130,7 @@ $(document).ready(function(){
     vencedor(pontos);
   }
 
+  //Declarando vencedor (ou Velha)
   function vencedor(pontos) {
 
     if(pontos == -3) {
